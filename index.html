@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hylien</title>
+    <!-- STYLESHEETS -->
+    <!-- reset -->
+    <link rel="stylesheet" href="./src/stylesheets/css/reset.css">
+    <!-- material -->
+    <link rel="stylesheet" href="node_modules/material-components-web/dist/material-components-web.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- myCss -->
+    <link rel="stylesheet" href="./src/stylesheets/css/main.css">
+
+  </head>
+  <body class="mdc-typography">
+    <!-- HEADER -->
+    <header class="mdc-toolbar mdc-toolbar--fixed">
+      <div class="mdc-toolbar__row">
+        <!-- section #1 -->
+        <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+          <div class="mdc-toolbar__title">
+            Hylien Random Generator
+          </div>
+        </section>
+        <!-- section #2 -->
+        <section class="mdc-toolbar__section">
+
+        </section>
+        <!-- section #3 -->
+        <section class="mdc-toolbar__section mdc-toolbar__section--align-end">
+          <!-- nav-START -->
+          <nav >
+            <ul >
+              <!-- contact -->
+              <li>
+                <a href="#">
+                  <span>Contact</span>
+                </a>
+              </li>
+              <!-- about -->
+              <li>
+                <a href="#">
+                  <span>About</span>
+                </a>
+              </li>
+              <!-- home -->
+              <li>
+                <a href="#">
+                  <span>Home</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <!-- nav-END -->
+        </section>
+      </div>
+    </header>
+
+    <!-- CONTENT -->
+    <div  class="mdc-layout-grid" id="content-grid">
+      <div class="mdc-layout-grid__inner">
+        <!-- left-grid -->
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3 mdc-layout-grid__cell--span-0-phone"></div>
+        <!-- *middle-grid* -->
+        <div id="middle-grid" class="dc-layout-grid__cell mdc-layout-grid__cell--span-6 mdc-layout-grid__cell--span-12-phone">
+          <!-- phase-1 -->
+          <div class="phase-wrapper">
+            <!-- row-1 -->
+            <div class="input-row">
+              <div class="flex-container">
+                <!-- item-1 -->
+                  <div id="input-1-a" class="mdc-text-field mdc-text-field--upgraded flex-item">
+                    <input id="input-1" class="mdc-text-field__input" aria-controls="text-field-1" type="number" name="" value="1">
+                    <label class="mdc-text-field__label mdc-text-field__label--float-above" for="input-1"> Number of Sets</label>
+                    <div class="mdc-text-field__bottom-line"></div>
+                  </div>
+
+                <!-- item-2 -->
+                  <div class="mdc-text-field mdc-text-field--upgraded flex-item">
+                    <input id="input-2" class="mdc-text-field__input" aria-controls="text-field-1" type="number" name="" value="10">
+                    <label class="mdc-text-field__label mdc-text-field__label--float-above" for="input-1"> Numbers per set</label>
+                    <div class="mdc-text-field__bottom-line"></div>
+                  </div>
+
+              </div>
+
+            </div>
+
+            <!-- row-2 -->
+            <div class="input-row">
+              <div class="flex-container">
+
+                <!-- item-1 -->
+                <div class="mdc-text-field mdc-text-field--upgraded flex-item">
+                  <input id="input-3" class="mdc-text-field__input" aria-controls="text-field-1" type="number" name="" value="1">
+                  <label class="mdc-text-field__label mdc-text-field__label--float-above" for="input-1"> Minimum</label>
+                  <div class="mdc-text-field__bottom-line"></div>
+                </div>
+
+                <!-- item-2 -->
+                <div class="mdc-text-field mdc-text-field--upgraded flex-item">
+                  <input id="input-4" class="mdc-text-field__input" aria-controls="text-field-1" type="number" name="" value="100">
+                  <label class="mdc-text-field__label mdc-text-field__label--float-above" for="input-1"> Maximum</label>
+                  <div class="mdc-text-field__bottom-line"></div>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+          <!-- phase-2 -->
+          <div class="phase-wrapper">
+            <!-- row-1 -->
+            <div class="input-row">
+              <span>Distribution shapes</span>
+              <!-- <div class="mdc-switch">
+                <input type="checkbox" id="basic-switch" class="mdc-switch__native-control" />
+                <div class="mdc-switch__background">
+                  <div class="mdc-switch__knob"></div>
+                </div>
+              </div>
+              <label for="basic-switch" class="mdc-switch-label">no/yes</label> -->
+
+            </div>
+            <!-- row-2 -->
+            <div class="mdc-grid-list">
+              <ul class="mdc-grid-list__tiles" id="dist-shapes">
+                <li class="mdc-grid-tile" id="dist-a" data-info="A">
+                  <div class="mdc-grid-tile__primary">
+                    <img class="mdc-grid-tile__primary-content" src="my-image.jpg" />
+                  </div>
+                  <span class="mdc-grid-tile__secondary">
+                    <span class="mdc-grid-tile__title">Random</span>
+                  </span>
+                </li>
+                <li class="mdc-grid-tile" data-info="B">
+                  <div class="mdc-grid-tile__primary">
+                    <img class="mdc-grid-tile__primary-content" src="my-image.jpg" />
+                  </div>
+                  <span class="mdc-grid-tile__secondary">
+                    <span class="mdc-grid-tile__title">Left skewed</span>
+                  </span>
+                </li>
+                <li class="mdc-grid-tile" data-info="C">
+                  <div class="mdc-grid-tile__primary">
+                    <img class="mdc-grid-tile__primary-content" src="my-image.jpg" />
+                  </div>
+                  <span class="mdc-grid-tile__secondary">
+                    <span class="mdc-grid-tile__title">Right skewed</span>
+                  </span>
+                </li>
+                <li class="mdc-grid-tile" data-info="D">
+                  <div class="mdc-grid-tile__primary">
+                    <img class="mdc-grid-tile__primary-content" src="my-image.jpg" />
+                  </div>
+                  <span class="mdc-grid-tile__secondary">
+                    <span class="mdc-grid-tile__title">Bell curve</span>
+                  </span>
+                </li>
+                <li class="mdc-grid-tile" data-info="E">
+                  <div class="mdc-grid-tile__primary">
+                    <img class="mdc-grid-tile__primary-content" src="my-image.jpg" />
+                  </div>
+                  <span class="mdc-grid-tile__secondary">
+                    <span class="mdc-grid-tile__title">Reverse bell-curve</span>
+                  </span>
+                </li>
+                <li class="mdc-grid-tile" data-info="F">
+                  <div class="mdc-grid-tile__primary">
+                    <img class="mdc-grid-tile__primary-content" src="my-image.jpg" />
+                  </div>
+                  <span class="mdc-grid-tile__secondary">
+                    <span class="mdc-grid-tile__title">Specific</span>
+                  </span>
+                </li>
+              </ul>
+            </div>
+            <!-- row-3 -->
+            <div class="input-row">
+              <!-- Skew towards NUMBER -->
+              <div id="skew-number" class="mdc-text-field mdc-text-field--upgraded">
+                <input type="number" id="skew-field" class="mdc-text-field__input" aria-controls="my-text-field-helper-text">
+                <label class="mdc-text-field__label" for="skew-field" style="padding-bottom:23px">
+                  Skew towards
+                </label>
+                <div class="mdc-text-field__bottom-line"></div>
+              </div>
+
+              <!-- Skew towards INFLUENCE -->
+              <div class="" style="width:49%;float:right;">
+                Influence
+                <div id="influence">
+                  <div class="mdc-slider mdc-slider--discrete" tabindex="0" role="slider"
+                       aria-valuemin="0" aria-valuemax="1" aria-valuenow="0.5"
+                       aria-label="Select Value" style="">
+                    <div class="mdc-slider__track-container">
+                      <div class="mdc-slider__track"></div>
+                    </div>
+                    <div class="mdc-slider__thumb-container">
+                      <div class="mdc-slider__pin">
+                        <span class="mdc-slider__pin-value-marker"></span>
+                      </div>
+                      <svg class="mdc-slider__thumb" width="21" height="21">
+                        <circle cx="10.5" cy="10.5" r="7.875"></circle>
+                      </svg>
+                      <div class="mdc-slider__focus-ring"></div>
+                    </div>
+                  </div>
+              </div>
+
+            </div>
+            <!-- row-3-END -->
+          </div>
+          <!-- phase-2-END -->
+          <!-- phase-3 -->
+          <div class="phase-wrapper">
+            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12" style="background-color:">
+
+              <h3 class="mdc-typography--subheading1">Would you like to sort your results?</h3>
+              <form id="sorting-form">
+                <div class="mdc-form-field">
+                  <div class="mdc-radio">
+                    <input class="mdc-radio__native-control" type="radio" id="radio-1" data-info="A" name="radios" checked>
+                    <div class="mdc-radio__background">
+                      <div class="mdc-radio__outer-circle"></div>
+                      <div class="mdc-radio__inner-circle"></div>
+                    </div>
+                  </div>
+                  <label id="radio-1-label" for="radio-1">No sorting</label>
+
+                </div>
+                <div class="mdc-form-field">
+                  <div class="mdc-radio">
+                    <input class="mdc-radio__native-control" type="radio" id="radio-2" data-info="B" name="radios">
+                    <div class="mdc-radio__background">
+                      <div class="mdc-radio__outer-circle"></div>
+                      <div class="mdc-radio__inner-circle"></div>
+                    </div>
+                  </div>
+                  <label id="radio-2-label" for="radio-2">Highest to lowest</label>
+
+                </div>
+                <div class="mdc-form-field">
+                  <div class="mdc-radio">
+                    <input class="mdc-radio__native-control" type="radio" id="radio-3" data-info="C" name="radios">
+                    <div class="mdc-radio__background">
+                      <div class="mdc-radio__outer-circle"></div>
+                      <div class="mdc-radio__inner-circle"></div>
+                    </div>
+                  </div>
+                  <label id="radio-3-label" for="radio-3">Lowest to highest</label>
+
+                </div>
+
+              </form>
+
+
+              <h3 class="mdc-typography--subheading1">Separator</h3>
+              <form id="separator-form">
+                <div class="mdc-form-field">
+                  <div class="mdc-radio">
+                    <input class="mdc-radio__native-control" type="radio" id="radio-4" data-info="A" name="radios">
+                    <div class="mdc-radio__background">
+                      <div class="mdc-radio__outer-circle"></div>
+                      <div class="mdc-radio__inner-circle"></div>
+                    </div>
+                  </div>
+                  <label id="radio-4-label" for="radio-4">Space</label>
+
+                </div>
+                <div class="mdc-form-field">
+                  <div class="mdc-radio">
+                    <input class="mdc-radio__native-control" type="radio" id="radio-5" data-info="B" name="radios">
+                    <div class="mdc-radio__background">
+                      <div class="mdc-radio__outer-circle"></div>
+                      <div class="mdc-radio__inner-circle"></div>
+                    </div>
+                  </div>
+                  <label id="radio-5-label" for="radio-5">Line break</label>
+
+                </div>
+                <div class="mdc-form-field">
+                  <div class="mdc-radio">
+                    <input class="mdc-radio__native-control" type="radio" id="radio-6" data-info="C" name="radios">
+                    <div class="mdc-radio__background">
+                      <div class="mdc-radio__outer-circle"></div>
+                      <div class="mdc-radio__inner-circle"></div>
+                    </div>
+                  </div>
+                  <label id="radio-6-label" for="radio-6">Comma</label>
+
+                </div>
+              </form>
+
+            </div>
+
+          </div>
+          <!-- phase-3-END -->
+          <!-- GENERATE_BUTTON -->
+          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12" style="background-color:">
+            <button type="button" id="generate-button" class="mdc-button mdc-button--raised" name="button" style="width:100%">Generate</button>
+          </div>
+          <!-- RESULTS_TEXT_FIELD -->
+          <!-- Results -->
+          <div id="outputField" class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12" style="background-color:;max-height:400px;overflow:scroll;overflow-x:hidden">
+            <div class="">
+              <h3 class="mdc-typography--title">Set #1</h3>
+              <p class="mdc-typography--body1">5412, 45231, 7974, 679746, 679746, 679746, 679746, 679746, 679746, 679746</p>
+            </div>
+            <div class="">
+              <h3 class="mdc-typography--title">Set #2</h3>
+              <p class="mdc-typography--body1">5412 45231 7974 679746 679746 679746 679746 679746 679746 679746</p>
+            </div>
+            <div class="">
+              <h3 class="mdc-typography--title">Set #3</h3>
+              <p class="mdc-typography--body1">5412<br>45231<br>7974<br>679746<br>679746<br>679746<br>679746<br>679746<br>679746<br>679746</p>
+            </div>
+            <div class="">
+              <h3 class="mdc-typography--title copy-text">Set #4</h3>
+              <p class="mdc-typography--body1 copy-text">5412<br>45231<br>7974<br>679746<br>679746<br>679746<br>679746<br>679746<br>679746<br>679746</p>
+            </div>
+            <div class="">
+              <h3 class="mdc-typography--title copy-text">Set #5</h3>
+              <p class="mdc-typography--body1 copy-text">5412<br>45231<br>7974<br>679746<br>679746<br>679746<br>679746<br>679746<br>679746<br>679746</p>
+            </div>
+
+          </div>
+          <!-- Results-END -->
+          <!-- COPY_BUTTON -->
+          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12" style="background-color:;width:100%">
+            <button type="button" class="mdc-button mdc-button--raised" id="copy-button" data-clipboard-target=".copy-text" style="width:100%"name="button">Copy ALL</button>
+          </div>
+          <!-- VISUALIZER_CANVAS -->
+          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12" style="background-color:;height:200px;">
+            <canvas id="canvas" width="400px" height="200px"></canvas>
+          </div>
+          <!-- /END -->
+        <!-- *middle-grid-END* -->
+        </div>
+        <!-- right-grid -->
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3 mdc-layout-grid__cell--span-0-phone"></div>
+      </div>
+    <!-- CONTENT-END -->
+    </div>
+
+    <!-- FOOTER -->
+    <footer style="background-color:#f0f0f0;" id="footer">
+      <div class="mdc-layout-grid">
+        <div class="mdc-layout-grid__inner">
+          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3 mdc-layout-grid__cell--span-0-phone">
+
+          </div>
+          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6" style="margin-top:40px;" >
+            <div class="" style="width:100%">
+              <div class="" style="margin:5px auto;text-align: center;">
+                <a href="#">Contact</a>
+              </div>
+            </div>
+            <div class="" style="width:100%">
+              <div class="" style="margin:5px auto;text-align: center;">
+                Social media Links
+                <div class="social-media">
+                  <i class="fab fa-facebook-square"></i>
+                  <i class="fab fa-twitter-square"></i>
+                  <i class="fab fa-github-square"></i>
+
+                </div>
+
+              </div>
+            </div>
+
+            <div class="" style="width:100%">
+              <div class="" style="margin:5px auto;text-align: center;">
+                <a href="#">Privacy</a> |
+                <a href="#">Terms of Service</a> |
+                <a href="#">Site map</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </footer>
+    <!-- footer-END -->
+    <!-- scripts -->
+      <!-- JQUERY -->
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+       <!-- clipboard -->
+    <script type="text/javascript"
+               src="src/scripts/clipboard.min.js"></script>
+       <!-- myScript-->
+    <script type="text/javascript"
+            src="src/scripts/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+nav {
+    width: 100%;
+    height: 64px;
+
+    flex: auto;
+    text-transform: uppercase;
+
+    margin: 0 auto;
+    margin-top: -5px;
+
+    ul {
+      height: inherit;
+      list-style: none;
+    }
+    li {
+      height: inherit;
+      float: right;
+    }
+    a {
+      height: inherit;
+      padding: 0 16px;
+
+      display: flex;
+      align-items: center;
+
+      text-decoration: none;
+      transition-delay: .2s;
+      -webkit-transition-delay: .2s;
+    }
+    span {
+      top: 10px;
+
+      color: white;
+      font-weight: 400;
+    }
+    a:hover {
+      border-bottom: 2px solid white;
+    }
+}

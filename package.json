@@ -1,0 +1,23 @@
+{
+  "name": "hylien",
+  "version": "1.0.0",
+  "description": "hylien random generator minimal viable product",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "random",
+    "generator",
+    "data-visualizer"
+  ],
+  "author": "Viktor Kugli",
+  "license": "BSD-3-Clause",
+  "dependencies": {
+    "clipboard": "^1.7.1",
+    "material-components-web": "^0.30.0"
+  },
+  "devDependencies": {
+    "webpack": "^3.11.0"
+  }
+}

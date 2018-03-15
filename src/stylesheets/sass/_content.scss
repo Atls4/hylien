@@ -1,0 +1,50 @@
+$standard-1: 200px;
+
+.phase-wrapper {
+  margin-bottom: 20px;
+}
+//INPUT NUMBERS
+.flex-container {
+  // display: flex;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+
+
+}
+.flex-item {
+  width: 230px;
+  margin: 0 40px;
+  // flex:auto;
+  //1782-390263
+}
+
+
+.input-row {
+  width: 100%;
+}
+
+footer {
+  width: 100%;
+}
+#content-grid {
+  padding: 0;
+}
+//Specific
+//skew-number
+#skew-number {
+  width: 49%;
+  padding-bottom: 23px;
+}
+#skew-field {
+  width: $standard-1;
+  margin: 0 auto;
+}
+//INFLUENCE
+#influence {
+  width: $standard-1;
+}
+.active {
+  background-color: yellow;
+}

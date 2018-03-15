@@ -1,0 +1,12 @@
+Select Events 
+Distribution shapes //
+
+	Left skew
+	Right skew
+	Bell curve ==
+	Reverse bell curve ==
+Generate event//
+Copy event //=
+Fix Fronte end
+
+negative numbers!
